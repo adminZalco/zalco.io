@@ -97,7 +97,7 @@
    --border-radius-md: 8px;
    --border-radius-lg: 16px;
    --container-max-width: 1440px;
-   --container-padding: var(--spacing-md);
+   --container-padding: var(--spacing-sm);
    --transition-ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
    --transition-duration-fast: 0.2s;
    --transition-duration-normal: 0.4s;
@@ -720,7 +720,7 @@ html.theme-dark .button--primary {
    backdrop-filter: blur(var(--blur-intensity));
    -webkit-backdrop-filter: blur(var(--blur-intensity));
    border: 1px solid var(--border-glass);
-   padding: var(--spacing-xl);
+   padding: var(--spacing-md);
    border-radius: var(--border-radius-lg);
    box-shadow: var(--box-shadow-card);
 }
