@@ -980,3 +980,196 @@ html.theme-dark .button--primary {
       transform: none !important;
    }
 }
+
+/* === NEW STYLES FOR SERVICES PAGE === */
+
+/* --- Services Page Hero --- */
+.hero--services .hero__title {
+   /* Potentially slightly different sizing or weight than home hero if desired */
+   /* For example, if you want it a bit more subdued: */
+   /* font-size: clamp(2.2rem, 5vw, 4.5rem); */
+}
+.hero--services .hero__subtitle {
+   /* Max-width might be different if the message is longer/shorter */
+   max-width: 700px;
+}
+
+/* --- Services Intro Section --- */
+.services-intro__container {
+   max-width: 900px; /* Constrain width for better readability */
+   margin: 0 auto;
+}
+.services-intro__title {
+   margin-bottom: var(--spacing-lg); /* More space after title */
+}
+.services-intro__content p {
+   font-size: var(--font-size-lg);
+   line-height: 1.7;
+   color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+   .services-intro__container {
+       /* Could be a two-column layout if title is significantly offset */
+   }
+}
+
+
+/* --- Service Detail Section --- */
+.service-detail {
+   overflow: hidden; /* Contain elements for animation */
+}
+.service-detail__container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--spacing-xl);
+   align-items: center;
+}
+.service-detail__category-tag {
+   display: inline-block;
+   font-size: var(--font-size-sm);
+   font-weight: var(--font-weight-medium);
+   color: var(--brand-accent);
+   background-color: color-mix(in srgb, var(--brand-accent) 15%, transparent);
+   padding: var(--spacing-xxs) var(--spacing-sm);
+   border-radius: var(--border-radius-sm);
+   margin-bottom: var(--spacing-sm);
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+}
+.service-detail__title {
+   margin-bottom: var(--spacing-md);
+}
+.service-detail__description {
+   font-size: var(--font-size-lg);
+   line-height: 1.7;
+   margin-bottom: var(--spacing-lg);
+   color: var(--text-secondary);
+}
+.service-detail__feature-list {
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: var(--spacing-lg);
+}
+.service-detail__feature-list li {
+   font-size: var(--font-size-md);
+   color: var(--text-primary);
+   padding-left: var(--spacing-md);
+   position: relative;
+   margin-bottom: var(--spacing-sm);
+}
+.service-detail__feature-list li::before {
+   content: '✓'; /* Or an SVG icon */
+   position: absolute;
+   left: 0;
+   color: var(--brand-primary);
+   font-weight: var(--font-weight-bold);
+}
+.service-detail__cta {
+   margin-top: var(--spacing-sm);
+}
+.service-detail__visual-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.service-detail__image {
+   border-radius: var(--border-radius-lg);
+   box-shadow: var(--box-shadow-card);
+   object-fit: cover; /* Ensure it fills its container if dimensions are set */
+   max-height: 600px; /* Control max height */
+}
+
+@media (min-width: 992px) { /* Apply two-column layout for larger screens */
+   .service-detail__container {
+       grid-template-columns: 1fr 1fr; /* Or use 1.2fr 0.8fr etc. for different ratios */
+       gap: var(--spacing-xxl);
+   }
+   .service-detail__container--image-left .service-detail__visual-content {
+       order: 1;
+   }
+   .service-detail__container--image-left .service-detail__text-content {
+       order: 2;
+   }
+   .service-detail__container--image-right .service-detail__visual-content {
+       order: 2;
+   }
+   .service-detail__container--image-right .service-detail__text-content {
+       order: 1;
+   }
+   .service-detail__visual-content {
+       /* Forcing image to take full height of its column if desired, adjust image aspect ratio */
+       /* height: 100%; */
+   }
+   .service-detail__image {
+       /* width: 100%; */
+       /* height: 100%; */
+   }
+}
+
+
+/* --- Process Overview Section --- */
+.process-overview__title {
+   margin-bottom: var(--spacing-sm); /* Tighter with subtitle */
+}
+.process-overview__subtitle {
+   margin-bottom: var(--spacing-xl);
+}
+.process-overview__steps {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--spacing-lg);
+}
+.process-step {
+   background-color: var(--background-surface-glass);
+   backdrop-filter: blur(var(--blur-intensity));
+   -webkit-backdrop-filter: blur(var(--blur-intensity));
+   border: 1px solid var(--border-glass);
+   padding: var(--spacing-lg);
+   border-radius: var(--border-radius-md);
+   box-shadow: var(--box-shadow-subtle);
+   text-align: center;
+}
+.process-step__number-wrapper {
+   margin-bottom: var(--spacing-sm);
+}
+.process-step__number {
+   font-size: var(--font-size-h3);
+   font-weight: var(--font-weight-bold);
+   color: var(--brand-primary);
+   /* Optional: Add a background or border to the number */
+   /* display: inline-block; width: 60px; height: 60px; line-height: 60px;
+      border-radius: 50%; border: 2px solid var(--brand-primary); */
+}
+.process-step__title {
+   font-size: var(--font-size-xl);
+   font-weight: var(--font-weight-semibold);
+   color: var(--text-primary);
+   margin-bottom: var(--spacing-xs);
+}
+.process-step__description {
+   font-size: var(--font-size-md);
+   color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+   .process-overview__steps {
+       grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+   }
+}
+@media (min-width: 992px) {
+   .process-overview__steps {
+       grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+       gap: var(--spacing-md);
+   }
+   .process-step {
+       padding: var(--spacing-xl); /* More padding on larger cards */
+       text-align: left; /* Align text left in larger cards */
+   }
+   .process-step__number-wrapper {
+       /* Potentially style numbers differently on desktop, e.g., larger, to the side */
+   }
+}
+
+
+/* --- Ensure responsive typography and spacing defined in :root and media queries apply correctly --- */
+/* ... any remaining media queries and global styles from main.css ... */

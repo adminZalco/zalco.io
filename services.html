@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Services - Zalco Technologies Pvt. Ltd.</title>
+        <meta name="description" content="Explore Zalco's comprehensive IT services including UI/UX Design, Web & Mobile App Development, and Cloud & DevOps solutions, engineered for your success.">
+        <link rel="icon" href="placeholder-favicon.svg" type="image/svg+xml">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/main.css"> <!-- Same stylesheet as homepage -->
+
+        <script src="js/lib/gsap.min.js" defer></script>
+        <script src="js/lib/ScrollTrigger.min.js" defer></script>
+        <script src="js/lib/TextPlugin.min.js" defer></script>
+        <!-- We might create a services-specific animation file if needed, or add to animations-home.js -->
+        <script src="js/animations-services.js" defer></script> <!-- Assuming a new file for service page specific animations -->
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <header class="header" data-header>
+            <div class="container header__container">
+                <a href="index.html" class="header__logo" aria-label="Zalco - Homepage">
+                    <span class="header__logo-text">Zalco</span>
+                </a>
+                <nav class="header__nav" aria-label="Main navigation" id="main-navigation">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="index.html" class="header__nav-link">Home</a></li>
+                        <li class="header__nav-item"><a href="services.html" class="header__nav-link header__nav-link--active" aria-current="page">Services</a></li>
+                        <li class="header__nav-item"><a href="about.html" class="header__nav-link">About Us</a></li>
+                        <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="header__theme-toggle" aria-label="Toggle light/dark theme">
+                    <span class="header__theme-icon" aria-hidden="true"><img src="./assets/icons/palette.svg" alt="theme switcher icon"></span>
+                </button>
+                <button class="header__menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main-content">
+
+            <!-- Section 1: Hero Section -->
+            <section class="hero hero--services" aria-labelledby="services-hero-title">
+                <div class="hero__background-visuals">
+                    <img src="./assets/backgrounds/pattern002.svg" alt="Abstract background representing diverse technological services." class="hero__background-img">
+                </div>
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <h1 id="services-hero-title" class="hero__title" data-animate-chars="services-hero-main">
+                            <span class="hero__title-line">Expertise That</span>
+                            <span class="hero__title-line">Empowers.</span>
+                        </h1>
+                        <p class="hero__subtitle" data-animate="services-hero-subtitle">We delivers a spectrum of advanced IT services, meticulously designed to solve your challenges and accelerate your vision.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Services Philosophy/Introductory Text -->
+            <section class="services-intro section-padding" aria-labelledby="services-intro-title">
+                <div class="container services-intro__container">
+                    <h2 id="services-intro-title" class="section-title section-title--left-aligned services-intro__title" data-animate-scroll="services-intro-heading">Our Commitment to Excellence</h2>
+                    <div class="services-intro__content" data-animate-scroll="services-intro-text">
+                        <p>At Zalco, we don't just offer services; we forge partnerships. Our approach is rooted in understanding your unique business landscape, enabling us to deliver bespoke technology solutions that are not only innovative but also practical and impactful. We are dedicated to quality craftsmanship and transparent collaboration every step of the way.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Detailed Service Sections -->
+
+            <!-- UI/UX Design Service -->
+            <section id="ui-ux" class="service-detail section-padding section-padding--colored" aria-labelledby="service-title-uiux">
+                <div class="container service-detail__container service-detail__container--image-right">
+                    <div class="service-detail__text-content" data-animate-scroll="uiux-text">
+                        <span class="service-detail__category-tag" data-animate-scroll="uiux-tag">Design Excellence</span>
+                        <h2 id="service-title-uiux" class="section-title section-title--left-aligned service-detail__title">User Experience & Interface Design</h2>
+                        <p class="service-detail__description">We craft intuitive, engaging, and aesthetically compelling digital experiences. Our human-centered design process ensures your product not only looks stunning but is also a joy to use, driving user adoption and satisfaction.</p>
+                        <ul class="service-detail__feature-list">
+                            <li data-animate-scroll-stagger="uiux-feature">User Research & Persona Development</li>
+                            <li data-animate-scroll-stagger="uiux-feature">Information Architecture & Wireframing</li>
+                            <li data-animate-scroll-stagger="uiux-feature">High-Fidelity Prototyping & UI Design</li>
+                            <li data-animate-scroll-stagger="uiux-feature">Usability Testing & Design Iteration</li>
+                        </ul>
+                        <a href="contact.html?service=UI/UX Design" class="button button--secondary service-detail__cta">Discuss Your Design Needs</a>
+                    </div>
+                    <div class="service-detail__visual-content" data-animate-scroll="uiux-visual">
+                        <img src="./assets/images/005.svg" alt="Visual representation of UI/UX design process and collaboration." class="service-detail__image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Website Design & Development Service -->
+            <section id="web-dev" class="service-detail section-padding" aria-labelledby="service-title-webdev">
+                <div class="container service-detail__container service-detail__container--image-left">
+                    <div class="service-detail__visual-content" data-animate-scroll="webdev-visual">
+                        <img src="./assets/images/006.svg" alt="Showcase of responsive website design on multiple devices." class="service-detail__image">
+                    </div>
+                    <div class="service-detail__text-content" data-animate-scroll="webdev-text">
+                        <span class="service-detail__category-tag" data-animate-scroll="webdev-tag">Web Solutions</span>
+                        <h2 id="service-title-webdev" class="section-title section-title--left-aligned service-detail__title">Website Design & Development</h2>
+                        <p class="service-detail__description">Your website is your digital flagship. We build high-performance, responsive, and SEO-optimized websites that not only reflect your brand's essence but also convert visitors into loyal customers and drive business objectives.</p>
+                        <ul class="service-detail__feature-list">
+                            <li data-animate-scroll-stagger="webdev-feature">Custom WordPress & CMS Solutions</li>
+                            <li data-animate-scroll-stagger="webdev-feature">E-commerce Platform Development</li>
+                            <li data-animate-scroll-stagger="webdev-feature">Front-End & Back-End Development</li>
+                            <li data-animate-scroll-stagger="webdev-feature">Performance Optimization & Security</li>
+                        </ul>
+                        <a href="contact.html?service=Web Development" class="button button--secondary service-detail__cta">Elevate Your Web Presence</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web Application Development Service -->
+            <section id="webapp-dev" class="service-detail section-padding section-padding--colored" aria-labelledby="service-title-webapp">
+                <div class="container service-detail__container service-detail__container--image-right">
+                    <div class="service-detail__text-content" data-animate-scroll="webapp-text">
+                        <span class="service-detail__category-tag" data-animate-scroll="webapp-tag">Application Engineering</span>
+                        <h2 id="service-title-webapp" class="section-title section-title--left-aligned service-detail__title">Web Application Development</h2>
+                        <p class="service-detail__description">We engineer powerful, scalable, and secure web applications tailored to your specific business processes. From complex enterprise platforms to innovative SaaS products, we deliver solutions that streamline operations and create new value streams. This includes robust native desktop applications using frameworks like Electron.</p>
+                        <ul class="service-detail__feature-list">
+                            <li data-animate-scroll-stagger="webapp-feature">Custom Web Application Architecture</li>
+                            <li data-animate-scroll-stagger="webapp-feature">SaaS Product Development</li>
+                            <li data-animate-scroll-stagger="webapp-feature">API Design & Integration</li>
+                            <li data-animate-scroll-stagger="webapp-feature">Electron-based Desktop Applications</li>
+                        </ul>
+                        <a href="contact.html?service=Web Application Development" class="button button--secondary service-detail__cta">Build Your Application</a>
+                    </div>
+                    <div class="service-detail__visual-content" data-animate-scroll="webapp-visual">
+                        <img src="./assets/images/007.svg" alt="Interface of a sophisticated web application or Electron app." class="service-detail__image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobile Application Development Service -->
+            <section id="mobile-dev" class="service-detail section-padding" aria-labelledby="service-title-mobiledev">
+                <div class="container service-detail__container service-detail__container--image-left">
+                    <div class="service-detail__visual-content" data-animate-scroll="mobiledev-visual">
+                        <img src="./assets/images/008.svg" alt="Mobile app designs shown on various smartphone screens." class="service-detail__image">
+                    </div>
+                    <div class="service-detail__text-content" data-animate-scroll="mobiledev-text">
+                        <span class="service-detail__category-tag" data-animate-scroll="mobiledev-tag">Mobile Innovation</span>
+                        <h2 id="service-title-mobiledev" class="section-title section-title--left-aligned service-detail__title">Mobile Application Development</h2>
+                        <p class="service-detail__description">Connect with your audience wherever they are. We design and develop high-performance native (iOS, Android) and cross-platform (Flutter, React Native) mobile applications that offer seamless user experiences and robust functionality.</p>
+                        <ul class="service-detail__feature-list">
+                            <li data-animate-scroll-stagger="mobiledev-feature">Native iOS & Android App Development</li>
+                            <li data-animate-scroll-stagger="mobiledev-feature">Cross-Platform with Flutter & React Native</li>
+                            <li data-animate-scroll-stagger="mobiledev-feature">App Prototyping & UI/UX for Mobile</li>
+                            <li data-animate-scroll-stagger="mobiledev-feature">Backend Integration & API Development</li>
+                        </ul>
+                        <a href="contact.html?service=Mobile App Development" class="button button--secondary service-detail__cta">Develop Your Mobile App</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cloud Solutions & DevOps Service -->
+            <section id="cloud-devops" class="service-detail section-padding section-padding--colored" aria-labelledby="service-title-cloud">
+                <div class="container service-detail__container service-detail__container--image-right">
+                    <div class="service-detail__text-content" data-animate-scroll="cloud-text">
+                        <span class="service-detail__category-tag" data-animate-scroll="cloud-tag">Infrastructure & Agility</span>
+                        <h2 id="service-title-cloud" class="section-title section-title--left-aligned service-detail__title">Cloud Solutions & DevOps</h2>
+                        <p class="service-detail__description">Maximize efficiency, scalability, and reliability with our expert cloud and DevOps services. We help you leverage the full potential of cloud platforms and implement agile DevOps practices to accelerate innovation and streamline operations.</p>
+                        <ul class="service-detail__feature-list">
+                            <li data-animate-scroll-stagger="cloud-feature">Cloud Architecture & Migration (AWS, Azure, GCP)</li>
+                            <li data-animate-scroll-stagger="cloud-feature">CI/CD Pipeline Implementation</li>
+                            <li data-animate-scroll-stagger="cloud-feature">Infrastructure as Code (IaC)</li>
+                            <li data-animate-scroll-stagger="cloud-feature">Containerization & Orchestration (Docker, Kubernetes)</li>
+                        </ul>
+                        <a href="contact.html?service=Cloud & DevOps" class="button button--secondary service-detail__cta">Optimize Your Infrastructure</a>
+                    </div>
+                    <div class="service-detail__visual-content" data-animate-scroll="cloud-visual">
+                        <img src="./assets/images/009.svg" alt="Abstract visual representing cloud infrastructure and DevOps workflow." class="service-detail__image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Our Approach / Process Overview -->
+            <section class="process-overview section-padding" aria-labelledby="process-title-section">
+                <div class="container">
+                    <h2 id="process-title-section" class="section-title process-overview__title" data-animate-scroll="process-title">Our Path to Your Success</h2>
+                    <p class="section-subtitle process-overview__subtitle" data-animate-scroll="process-subtitle">We follow a structured yet flexible methodology to ensure clarity, quality, and alignment with your objectives at every stage.</p>
+                    <div class="process-overview__steps">
+                        <!-- Step 1 -->
+                        <div class="process-step" data-animate-scroll-stagger="process-step">
+                            <div class="process-step__number-wrapper"><span class="process-step__number">01</span></div>
+                            <h3 class="process-step__title">Discovery & Strategy</h3>
+                            <p class="process-step__description">We begin by deeply understanding your vision, objectives, target audience, and competitive landscape to define a clear strategic roadmap.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="process-step" data-animate-scroll-stagger="process-step">
+                            <div class="process-step__number-wrapper"><span class="process-step__number">02</span></div>
+                            <h3 class="process-step__title">Design & Prototyping</h3>
+                            <p class="process-step__description">Our design team translates strategy into intuitive interfaces and engaging experiences, validated through iterative prototyping and user feedback.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="process-step" data-animate-scroll-stagger="process-step">
+                            <div class="process-step__number-wrapper"><span class="process-step__number">03</span></div>
+                            <h3 class="process-step__title">Development & Testing</h3>
+                            <p class="process-step__description">Skilled engineers bring designs to life with clean, efficient code, followed by rigorous testing to ensure quality, performance, and security.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="process-step" data-animate-scroll-stagger="process-step">
+                            <div class="process-step__number-wrapper"><span class="process-step__number">04</span></div>
+                            <h3 class="process-step__title">Deployment & Support</h3>
+                            <p class="process-step__description">We manage a seamless deployment and provide ongoing support and optimization to ensure your solution continues to deliver value.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Cross-Service Call to Action (CTA) -->
+            <section class="cta section-padding section-padding--colored" aria-labelledby="services-cta-title">
+                <div class="container">
+                    <div class="container cta__container" data-animate-scroll="services-cta-content">
+                        <h2 id="services-cta-title" class="section-title cta__title">Have a Project in Mind?</h2>
+                        <p class="cta__text">Whether you're looking to innovate with a new application, revitalize your website, or scale your infrastructure, Zalco has the expertise to bring your vision to life. Let's discuss your specific requirements.</p>
+                        <a href="contact.html" class="button button--primary button--large cta__button">
+                            <span>Request a Consultation</span>
+                            <span class="button__icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer section-padding">
+            <!-- Footer content remains the same as index.html -->
+            <div class="container footer__container">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo" aria-label="Zalco Technologies - Homepage">
+                            <span class="footer__logo-text">Zalco</span>
+                        </a>
+                        <p class="footer__tagline">Pioneering digital innovation, together.</p>
+                    </div>
+                    <div class="footer__links-group">
+                        <h3 class="footer__links-title">Company</h3>
+                        <ul class="footer__list">
+                            <li><a href="services.html" class="footer__link">Services</a></li>
+                            <li><a href="about.html" class="footer__link">About Us</a></li>
+                            <li><a href="contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links-group">
+                        <h3 class="footer__links-title">Connect</h3>
+                        <ul class="footer__list">
+                            <li><a href="https://www.linkedin.com/company/zalco-technologies" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <!-- <li><a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">Twitter (X)</a></li> -->
+                            <!-- <li><a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer__contact-info">
+                        <h3 class="footer__links-title">Get in Touch</h3>
+                        <p><a href="mailto:info@zalco.io" class="footer__link">info@zalco.io</a></p>
+                        <p><a href="tel:+918417842117" class="footer__link">+91 841 784 2117</a></p>
+                        <p>Lucknow, Uttar Pradesh</p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">© <span class="current-year"></span> Zalco Technologies Pvt. Ltd. All Rights Reserved.</p>
+                    <ul class="footer__legal-list">
+                        <li><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="footer__legal-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Basic JS for current year and mobile menu toggle
+            // Assuming main.js handles this primarily, but ensure it's present
+            // This can be refactored into main.js if not already fully there
+            document.querySelector('.current-year').textContent = new Date().getFullYear();
+
+            const menuToggle = document.querySelector('.header__menu-toggle');
+            const mainNav = document.querySelector('.header__nav');
+            const header = document.querySelector('.header');
+
+            if (menuToggle && mainNav && header) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    mainNav.classList.toggle('header__nav--open');
+                    header.classList.toggle('header--menu-open');
+                    document.body.classList.toggle('no-scroll');
+                });
+            }
+
+            const themeToggleBtn = document.querySelector('.header__theme-toggle');
+            if (themeToggleBtn) {
+                const applyTheme = (theme) => {
+                    if (theme === 'theme-dark') {
+                        document.documentElement.classList.remove('theme-light');
+                        document.documentElement.classList.add('theme-dark');
+                        localStorage.setItem('theme', 'theme-dark');
+                    } else {
+                        document.documentElement.classList.remove('theme-dark');
+                        document.documentElement.classList.add('theme-light');
+                        localStorage.setItem('theme', 'theme-light');
+                    }
+                };
+                let currentTheme = localStorage.getItem('theme');
+                if (!currentTheme) {
+                    currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'theme-dark' : 'theme-light';
+                }
+                applyTheme(currentTheme);
+                themeToggleBtn.addEventListener('click', () => {
+                    const newTheme = document.documentElement.classList.contains('theme-dark') ? 'theme-light' : 'theme-dark';
+                    applyTheme(newTheme);
+                });
+            }
+        </script>
+    </body>
+</html>
