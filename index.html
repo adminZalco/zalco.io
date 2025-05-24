@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light"> <!-- Default to light theme -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zalco Technologies - Next-Generation IT Consultancy</title>
+        <meta name="description" content="Zalco Technologies delivers transformative IT services, from cutting-edge UI/UX design to robust web and mobile development and scalable cloud infrastructure.">
+        <!-- Favicon (placeholder - replace with your actual favicon) -->
+        <link rel="icon" href="placeholder-favicon.svg" type="image/svg+xml">
+
+        <!-- Preconnect for Google Fonts (if using them) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Example Fonts (replace with your chosen premium fonts) -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Stylesheet (will be created next) -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- GSAP (Uncomment and add paths when ready for animations) -->
+        <script src="js/lib/gsap.min.js" defer></script>
+        <script src="js/lib/ScrollTrigger.min.js" defer></script>
+        <script src="js/lib/TextPlugin.min.js" defer></script>
+        <script src="js/animations-home.js" defer></script>
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+
+        <!-- Screen reader skip link -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- Header -->
+        <header class="header" data-header>
+            <div class="container header__container">
+                <a href="index.html" class="header__logo" aria-label="Zalco Technologies - Homepage">
+                    <!-- Placeholder for SVG logo or text -->
+                    <span class="header__logo-text">Zalco</span>
+                </a>
+                <nav class="header__nav" aria-label="Main navigation" id="main-navigation">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Home</a></li>
+                        <li class="header__nav-item"><a href="services.html" class="header__nav-link">Services</a></li>
+                        <li class="header__nav-item"><a href="about.html" class="header__nav-link">About Us</a></li>
+                        <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="header__theme-toggle" aria-label="Toggle light/dark theme">
+                    <!-- Icon for theme toggle (e.g., sun/moon SVG) -->
+                    <span class="header__theme-icon" aria-hidden="true"><img src="./assets/icons/palette.svg" alt="theme switcher icon"></span>
+                </button>
+                <button class="header__menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main-content">
+
+            <!-- Section 1: Hero Section -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero__background-visuals">
+                    <img src="./assets/backgrounds/pattern.svg" alt="Abstract background with flowing lines and a futuristic glow." class="hero__background-img">
+                </div>
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <h1 id="hero-title" class="hero__title" data-animate-chars="hero-main-title">
+                            <span class="hero__title-line">Engineering</span>
+                            <span class="hero__title-line">Tomorrow's Tech.</span>
+                        </h1>
+                        <p class="hero__subtitle" data-animate="hero-subtitle">We partner with visionary businesses to design and develop cutting-edge digital experiences that drive growth and define industries.</p>
+                        <a href="services.html" class="button button--primary hero__cta" data-animate="hero-cta">
+                            <span>Discover Our Capabilities</span>
+                            <span class="button__icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: "Who We Are" / Brief Intro -->
+            <section class="intro section-padding" aria-labelledby="intro-title-section">
+                <div class="container intro__container">
+                    <div class="intro__visual-content" data-animate-scroll="intro-visual">
+                        <img src="./assets/images/003.svg" alt="Modern visual representing Zalco Technologies' collaborative and innovative approach." class="intro__image">
+                    </div>
+                    <div class="intro__text-content" data-animate-scroll="intro-text">
+                        <h2 id="intro-title-section" class="section-title section-title--left-aligned intro__title">The Art of Digital Transformation</h2>
+                        <p class="intro__paragraph">At Zalco Technologies, we fuse strategic thinking with technical mastery. Our mission is to empower your business by translating complex challenges into elegant, high-performing digital solutions.</p>
+                        <p class="intro__paragraph">We believe in a collaborative partnership, working closely with you to understand your unique goals and deliver outcomes that truly matter.</p>
+                        <a href="about.html" class="link-styled intro__link">
+                            <span>Meet Our Team</span>
+                            <span class="link-styled__icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Core Services Overview (Card-based - Apple Style) -->
+            <section class="services-overview section-padding" aria-labelledby="services-title-section">
+                <div class="container">
+                    <h2 id="services-title-section" class="section-title services-overview__title" data-animate-scroll="services-title">Intelligent Solutions, Tangible Results</h2>
+                    <p class="section-subtitle services-overview__subtitle" data-animate-scroll="services-subtitle">From initial concept to final deployment, we provide a comprehensive suite of services designed to elevate your digital presence.</p>
+                    <div class="services-overview__grid">
+                        <!-- Service Card 1: UI/UX Design -->
+                        <article class="card-service" data-animate-scroll-stagger="service-card">
+                            <div class="card-service__icon-wrapper">
+                                <img src="./assets/icons/app-dots.svg" alt="UI/UX Design Icon" class="card-service__icon">
+                            </div>
+                            <h3 class="card-service__title">UI/UX Design</h3>
+                            <p class="card-service__description">Crafting intuitive, user-centric interfaces that captivate audiences and drive meaningful engagement for lasting impact.</p>
+                            <a href="services.html#ui-ux" class="card-service__link" aria-label="Learn more about our UI/UX Design services">
+                                <span>Explore Design</span>
+                                <span class="card-service__link-icon" aria-hidden="true">→</span>
+                            </a>
+                        </article>
+                        <!-- Service Card 2: Web Development -->
+                        <article class="card-service" data-animate-scroll-stagger="service-card">
+                            <div class="card-service__icon-wrapper">
+                                <img src="./assets/icons/box-2.svg" alt="Web Development Icon" class="card-service__icon">
+                            </div>
+                            <h3 class="card-service__title">Web Development</h3>
+                            <p class="card-service__description">Building robust, scalable, and high-performance web platforms engineered for optimal user experience and business growth.</p>
+                            <a href="services.html#web-dev" class="card-service__link" aria-label="Learn more about our Web Development services">
+                                <span>Explore Web</span>
+                                <span class="card-service__link-icon" aria-hidden="true">→</span>
+                            </a>
+                        </article>
+                        <!-- Service Card 3: Mobile App Development -->
+                        <article class="card-service" data-animate-scroll-stagger="service-card">
+                            <div class="card-service__icon-wrapper">
+                                <img src="./assets/icons/smartphone.svg" alt="Mobile App Development Icon" class="card-service__icon">
+                            </div>
+                            <h3 class="card-service__title">Mobile App Development</h3>
+                            <p class="card-service__description">Developing immersive native and cross-platform mobile applications that connect with users on any device, anywhere.</p>
+                            <a href="services.html#mobile-dev" class="card-service__link" aria-label="Learn more about our Mobile App Development services">
+                                <span>Explore Mobile</span>
+                                <span class="card-service__link-icon" aria-hidden="true">→</span>
+                            </a>
+                        </article>
+                        <!-- Service Card 4: Cloud & DevOps -->
+                        <article class="card-service" data-animate-scroll-stagger="service-card">
+                            <div class="card-service__icon-wrapper">
+                                <img src="./assets/icons/coin-stack.svg" alt="Cloud & DevOps Icon" class="card-service__icon">
+                            </div>
+                            <h3 class="card-service__title">Cloud & DevOps</h3>
+                            <p class="card-service__description">Optimizing your infrastructure and automating workflows with advanced cloud and DevOps strategies for peak efficiency.</p>
+                            <a href="services.html#cloud-devops" class="card-service__link" aria-label="Learn more about our Cloud & DevOps services">
+                                <span>Explore Cloud</span>
+                                <span class="card-service__link-icon" aria-hidden="true">→</span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: "Why Choose Us?" / Key Differentiators -->
+            <section class="differentiators section-padding" aria-labelledby="differentiators-title-section">
+                <div class="container">
+                    <h2 id="differentiators-title-section" class="section-title differentiators__title" data-animate-scroll="differentiators-title">The Zalco Technologies Edge</h2>
+                    <div class="differentiators__layout">
+                        <div class="differentiator-item" data-animate-scroll-stagger="differentiator-item">
+                            <div class="differentiator-item__graphic-wrapper">
+                                <img src="./assets/icons/approved.svg" alt="Graphic for Strategic Expertise" class="differentiator-item__graphic">
+                            </div>
+                            <h3 class="differentiator-item__title">Strategic Expertise</h3>
+                            <p class="differentiator-item__description">Our seasoned strategists provide deep industry insights to ensure your technology investments yield maximum returns.</p>
+                        </div>
+                        <div class="differentiator-item" data-animate-scroll-stagger="differentiator-item">
+                            <div class="differentiator-item__graphic-wrapper">
+                                <img src="./assets/icons/briefcase.svg" alt="Graphic for Collaborative Partnership" class="differentiator-item__graphic">
+                            </div>
+                            <h3 class="differentiator-item__title">Collaborative Partnership</h3>
+                            <p class="differentiator-item__description">We become an extension of your team, fostering open communication and shared goals for project success.</p>
+                        </div>
+                        <div class="differentiator-item" data-animate-scroll-stagger="differentiator-item">
+                            <div class="differentiator-item__graphic-wrapper">
+                                <img src="./assets/icons/rocket.svg" alt="Graphic for Future-Proof Solutions" class="differentiator-item__graphic">
+                            </div>
+                            <h3 class="differentiator-item__title">Future-Proof Solutions</h3>
+                            <p class="differentiator-item__description">We leverage cutting-edge technologies and agile methodologies to build solutions that adapt and scale with your business.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Client Impact / Mini Case Snippet -->
+            <section class="client-impact section-padding" aria-labelledby="client-impact-title-section">
+                <div class="container client-impact__container">
+                    <div class="client-impact__content" data-animate-scroll="client-impact-content">
+                        <h2 id="client-impact-title-section" class="section-title client-impact__title">Transforming Businesses, Measurably.</h2>
+                        <blockquote class="client-impact__quote">
+                            <p class="client-impact__quote-text">"Working with Zalco Technologies revolutionized our customer engagement platform, leading to a 40% increase in conversions and significantly enhanced user satisfaction. Their expertise is unparalleled."</p>
+                            <footer class="client-impact__quote-author">
+                                <span class="client-impact__author-name">Shubham Shukla, CEO & Founder at Nixet</span>
+                                <img src="./assets/logos/NixetTextLogo.svg" alt="TechForward Corp company logo" class="client-impact__client-logo">
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Call to Action (CTA) -->
+            <section class="cta section-padding" aria-labelledby="cta-title-section">
+                <div class="container">
+                    <div class="cta__container" data-animate-scroll="cta-content">
+                        <h2 id="cta-title-section" class="section-title cta__title">Ready to Redefine Your Digital Future?</h2>
+                        <p class="cta__text">Let's discuss how Zalco Technologies can tailor a strategy to meet your unique challenges and unlock new opportunities. Schedule your complimentary consultation today.</p>
+                        <a href="contact.html" class="button button--primary button--large cta__button">
+                            <span>Start Your Transformation</span>
+                            <span class="button__icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer section-padding">
+            <div class="container footer__container">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo" aria-label="Zalco Technologies - Homepage">
+                            <span class="footer__logo-text">Zalco</span>
+                        </a>
+                        <p class="footer__tagline">Pioneering digital innovation, together.</p>
+                    </div>
+                    <div class="footer__links-group">
+                        <h3 class="footer__links-title">Company</h3>
+                        <ul class="footer__list">
+                            <li><a href="about.html" class="footer__link">About Us</a></li>
+                            <li><a href="services.html" class="footer__link">Services</a></li>
+                            <li><a href="blog.html" class="footer__link">Insights</a></li>
+                            <li><a href="contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links-group">
+                        <h3 class="footer__links-title">Connect</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">Twitter (X)</a></li>
+                            <li><a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact-info">
+                        <h3 class="footer__links-title">Get in Touch</h3>
+                        <p><a href="mailto:info@zalco.io" class="footer__link">info@zalco.io</a></p>
+                        <p><a href="tel:+918417842117" class="footer__link">+91 841 784 2117</a></p>
+                        <p>Lucknow, Uttar Pradesh</p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">© <span class="current-year"></span> Zalco Technologies Inc. All Rights Reserved.</p>
+                    <ul class="footer__legal-list">
+                        <li><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="footer__legal-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Basic JS for current year and mobile menu toggle (can be expanded)
+            document.querySelector('.current-year').textContent = new Date().getFullYear();
+
+            const menuToggle = document.querySelector('.header__menu-toggle');
+            const mainNav = document.querySelector('.header__nav');
+            const header = document.querySelector('.header'); // Ensure 'header' is defined
+
+            if (menuToggle && mainNav && header) { // Check if 'header' exists
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    mainNav.classList.toggle('header__nav--open');
+                    header.classList.toggle('header--menu-open');
+                    document.body.classList.toggle('no-scroll');
+                });
+            }
+
+            // Theme Toggle with localStorage persistence
+            const themeToggleBtn = document.querySelector('.header__theme-toggle');
+            if (themeToggleBtn) {
+                const applyTheme = (theme) => {
+                    if (theme === 'theme-dark') {
+                        document.documentElement.classList.remove('theme-light');
+                        document.documentElement.classList.add('theme-dark');
+                        // Example: themeToggleBtn.querySelector('.header__theme-icon').innerHTML = '<!-- SVG for Moon -->';
+                        localStorage.setItem('theme', 'theme-dark');
+                    } else {
+                        document.documentElement.classList.remove('theme-dark');
+                        document.documentElement.classList.add('theme-light');
+                        // Example: themeToggleBtn.querySelector('.header__theme-icon').innerHTML = '<!-- SVG for Sun -->';
+                        localStorage.setItem('theme', 'theme-light');
+                    }
+                };
+                
+                let currentTheme = localStorage.getItem('theme');
+                if (!currentTheme) {
+                    currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'theme-dark' : 'theme-light';
+                }
+                applyTheme(currentTheme);
+
+                themeToggleBtn.addEventListener('click', () => {
+                    const newTheme = document.documentElement.classList.contains('theme-dark') ? 'theme-light' : 'theme-dark';
+                    applyTheme(newTheme);
+                });
+            }
+        </script>
+    </body>
+</html>
