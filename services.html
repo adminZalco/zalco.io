@@ -3,9 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Services - Zalco Technologies Pvt. Ltd.</title>
-        <meta name="description" content="Explore Zalco's comprehensive IT services including UI/UX Design, Web & Mobile App Development, and Cloud & DevOps solutions, engineered for your success.">
-        <link rel="icon" href="placeholder-favicon.svg" type="image/svg+xml">
+        <title>Zalco: IT Consultancy for Web, Mobile & Cloud Solutions</title>
+        <meta name="description" content="Partner with Zalco for expert IT consultancy. We craft innovative UI/UX, develop high-performance web & mobile apps, and optimize cloud infrastructure for your success.">
+        <link rel="canonical" href="https://www.zalco.io/">
+        <meta name="robots" content="index, follow">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Zalco IT Services" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.zalco.io/"> <!-- REPLACE with your actual homepage URL -->
+        <meta property="og:title" content="Zalco: IT Consultancy for Web, Mobile & Cloud Solutions">
+        <meta property="og:description" content="Partner with Zalco for expert IT consultancy. We craft innovative UI/UX, develop high-performance web & mobile apps, and optimize cloud infrastructure for your success.">
+        <!-- REPLACE "https://www.zalco.io/images/og-image.jpg" with a URL to a compelling share image (e.g., 1200x630px) -->
+        <meta property="og:image" content="https://www.zalco.io/assets/images/og-image.png">
+        <meta property="og:image:alt" content="Zalco Logo and IT Services Overview">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="Zalco">
+        <meta property="og:locale" content="en_US"> <!-- Or your primary locale e.g., en_IN -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +39,63 @@
         <!-- We might create a services-specific animation file if needed, or add to animations-home.js -->
         <script src="js/animations-services.js" defer></script> <!-- Assuming a new file for service page specific animations -->
         <script src="js/main.js" defer></script>
+
+            <!-- STRUCTURED DATA (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zalco Technologies Pvt. Ltd.",
+            "alternateName": "Zalco",
+            "url": "https://www.zalco.io/", // REPLACE with your actual domain
+            "logo": "https://www.zalco.io/images/zalco-logo.svg", // REPLACE with actual path to your logo
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "[Your Actual Phone Number]", // e.g., +91-XXX-XXXXXXX
+                "contactType": "Sales and Information",
+                "email": "info@zalco.io",
+                "areaServed": "IN", // Specify country or regions if applicable
+                "availableLanguage": ["en"]
+            },
+            "sameAs": [
+                // "https://www.linkedin.com/company/your-zalco-linkedin-id/", // REPLACE
+                // "https://twitter.com/your-zalco-twitter-handle/" // REPLACE
+                // Add other social profiles (GitHub, etc.)
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "[Your Street Address]", // REPLACE
+                "addressLocality": "[Your City]", // REPLACE
+                "addressRegion": "[Your State/Region]", // REPLACE
+                "postalCode": "[Your Postal Code]", // REPLACE
+                "addressCountry": "IN" // REPLACE with your country code (e.g., IN for India, US for USA)
+            }
+            }
+            </script>
+            <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Zalco",
+            "url": "https://www.zalco.io/", // REPLACE with your actual domain
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.zalco.io/search?q={search_term_string}" // REPLACE if you implement site search
+                },
+                "query-input": "required name=search_term_string"
+            }
+            }
+        </script>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
 
         <header class="header" data-header>
             <div class="container header__container">
-                <a href="index.html" class="header__logo" aria-label="Zalco - Homepage">
-                    <span class="header__logo-text">Zalco</span>
+                <a href="index.html" class="header__logo" aria-label="Zalco Technologies - Homepage">
+                    <span class="header__logo"><img src="./assets/logos/ZalcoLogo.svg" alt="Zalco Logo">Zalco</span>
                 </a>
                 <nav class="header__nav" aria-label="Main navigation" id="main-navigation">
                     <ul class="header__nav-list">
@@ -238,7 +307,7 @@
                 <div class="footer__main">
                     <div class="footer__brand">
                         <a href="index.html" class="footer__logo" aria-label="Zalco Technologies - Homepage">
-                            <span class="footer__logo-text">Zalco</span>
+                            <span class="footer__logo"><img src="./assets/logos/ZalcoIcon.svg" alt="Zalco Logo">Zalco</span>
                         </a>
                         <p class="footer__tagline">Pioneering digital innovation, together.</p>
                     </div>

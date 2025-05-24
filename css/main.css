@@ -31,9 +31,9 @@
    --color-background-dark-100: hsl(216, 24%, 6%);
    --color-background-dark-90: hsl(216, 24%, 9%);
    --color-surface-dark: #16324f; /* Dark Muted Blue for cards */
-   --color-surface-glass-dark: rgba(28, 53, 79, 0.6); /* For glassmorphism */
+   --color-surface-glass-dark: rgba(28, 53, 79, 0.12); /* For glassmorphism */
    --color-border-dark: rgba(255, 255, 255, 0.1);
-   --color-border-glass-dark: rgba(255, 255, 255, 0.15);
+   --color-border-glass-dark: rgba(255, 255, 255, 0.06);
 
    --color-text-primary-dark: #ecf9fe; /* Very Light Blue/Off-White */
    --color-text-secondary-dark: #a0c8e0; /* Lighter Muted Blue */
@@ -378,8 +378,12 @@ html.theme-dark .button--primary {
    text-decoration: none;
    z-index: 1;
 } /* Ensure logo is above potential menu backdrop */
-.header__logo-text {
+.header__logo {
    /* Style your logo text or SVG here */
+   max-width: 3rem;
+   display: flex;
+   align-items: center;
+   gap: 0.25rem;
 }
 .header__nav {
    display: none; /* Mobile first */
@@ -756,11 +760,15 @@ html.theme-dark .button--primary {
    margin-bottom: var(--spacing-md);
 }
 .footer__logo {
-   font-size: var(--font-size-lg);
+   font-size: var(--font-size-xl);
    font-weight: var(--font-weight-bold);
    color: var(--text-primary);
-   display: inline-block;
    margin-bottom: var(--spacing-xs);
+   display: grid;
+   gap: 0.25rem;
+}
+.footer__logo img {
+   max-width: 3rem;
 }
 .footer__tagline {
    font-size: var(--font-size-sm);
